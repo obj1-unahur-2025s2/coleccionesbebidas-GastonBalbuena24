@@ -30,3 +30,16 @@ describe "test de tito" {
     }
 
 }
+
+test "tito consume licuado de manzana y mandarina " {
+    licuado.agregar(manzana)
+    licuado.agregar(mandarina)
+    tito.consumir(3000, licuado)
+    assert.equals(18900, tito.velocidad())
+}
+
+test "tito consume agua saborizada de whisky" {
+    var aguaSaborizada.saborizar(whisky)
+    tito.consumir(8, aguaSaborizada)
+    assert.equals(1.81,tito.velocidad())
+}

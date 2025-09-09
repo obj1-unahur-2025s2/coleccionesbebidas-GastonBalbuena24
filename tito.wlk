@@ -28,3 +28,40 @@ object terere {
         //tambien (cantidad * 0.1).max(1)
     }
 }
+
+
+//parte de 2 de bebidas
+
+object aguaSaborizada {
+    var saborizante = terere
+    method saborizar() {
+       saborizante = unaBebida
+    }
+
+    method rendimiento() {
+        return 1 + saborizante.rendimiento(cantidad/4)
+      
+    }
+}
+object licuado {
+    const nutrientes = [] 
+
+    method agregar(unIngrediente) {
+      nutrientes.add(unIngrediente.nutrientes())
+    }
+    method rendimiento(cantidad) {
+      return nutrientes.sum() * cantidad
+    }
+}
+
+object manzana {
+    method nutrientes() = 4 
+}
+
+object naranja {
+    method nutrientes() = 10
+}
+
+object mandarina {
+    method nutrientes() = 5
+}
